@@ -18,14 +18,10 @@
     <h1>相濡以沫，不如相忘于江湖</h1>
     <div id="music">
     </div>
-    </br>
-    </br>
-    </br>
-    </br>
 </div>
 <script>
     $(document).ready(function() {
-        var albumNo=359939184;
+        //var albumNo=526739723;
         try{
             $.ajax({
                 url: './data/index.xml',
@@ -44,8 +40,12 @@
                     });
                     albumNo=$(data).find("musicNo").find("no").text();
                     console.log(albumNo);
-                    var src="http://music.163.com/outchain/player?type=0&id="+albumNo+"&auto=0&height=90";
-                   // $("#music").append("<iframe frameborder='no' border='0' marginwidth='0' marginheight='0' width=330 height=110 src="+src+"></iframe>");
+                    var src="http://music.163.com/outchain/player?type=0&id="+albumNo+"&auto=0&height=230";
+                    //var src="http://music.163.com/outchain/player?type=0&id="+albumNo+"&auto=0&height=90";
+					//var src="http://music.163.com/outchain/player?type=2&id=38592852&auto=1&height=66";
+                    $("#music").append("<iframe frameborder='no' border='0' marginwidth='0' marginheight='0' width=330 height=230 src="+src+"></iframe>");   //带播放列表
+                    //$("#music").append("<iframe frameborder='no' border='0' marginwidth='0' marginheight='0' width=330 height=110 src="+src+"></iframe>");
+				   //  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="http://music.163.com/outchain/player?type=2&id=38592852&auto=1&height=66"></iframe>
                 }
             });
 
