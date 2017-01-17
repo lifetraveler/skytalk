@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html >
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>life is a long,long traveler</title>
+    <style type="text/css">
+        *{margin:0}
+        html{height:100%; overflow:hidden;}
+        body{height:100%; overflow:hidden;}
+        div.jumbotron{height:100%; overflow:auto;}
+    </style>
+    <link rel="stylesheet" href="http://libs.useso.com/js/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <script language="JavaScript" src="http://libs.useso.com/js/jquery/2.0.0/jquery.min.js"></script>
+    <script language="JavaScript" src="http://libs.useso.com/js/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="jumbotron">
+    <h1>相濡以沫，不如相忘于江湖</h1>
+    <div id="music">
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        //var albumNo=526739723;
+        try{
+            $.ajax({
+                url: './data/index.xml',
+                dataType: 'xml',
+                success: function(data){
+                    //console.log(data);
+                    $(data).find("channel").find("item").each(function(index, ele) {
+                        var titles = $(ele).find("title").text();
+                        var dates = $(ele).find("date").text();
+                        var context=$(ele).find("context").text();
+                        console.log(titles+":"+dates+":"+context);
+                        //<span class='glyphicon glyphicon-heart-empty' aria-hidden='true' ></span> &hearts;
+                        $(".jumbotron").append("<div class='row'><div class='col-md-1'></div><div class='col-md-1'><p>"+dates+"</p></div>" +
+                            "<div class='col-md-9'><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+context+"</p></div></div>");
+
+                    });
+                    albumNo=$(data).find("musicNo").find("no").text();
+                    console.log(albumNo);
+                    var src="http://music.163.com/outchain/player?type=0&id="+albumNo+"&auto=0&height=230";
+                    //var src="http://music.163.com/outchain/player?type=0&id="+albumNo+"&auto=0&height=90";
+                    //var src="http://music.163.com/outchain/player?type=2&id=38592852&auto=1&height=66";
+                    $("#music").append("<iframe frameborder='no' border='0' marginwidth='0' marginheight='0' width=330 height=230 src="+src+"></iframe>");   //带播放列表
+                    //$("#music").append("<iframe frameborder='no' border='0' marginwidth='0' marginheight='0' width=330 height=110 src="+src+"></iframe>");
+                    //  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="http://music.163.com/outchain/player?type=2&id=38592852&auto=1&height=66"></iframe>
+                }
+            });
+
+        }catch (e){
+            console.info(e.message)
+        }
+
+    })
+</script>
+</body>
+</html>
