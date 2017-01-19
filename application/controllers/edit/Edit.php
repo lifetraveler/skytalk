@@ -5,6 +5,8 @@
  * Date: 2017/1/18
  * Time: 11:32
  */
+
+header('Access-Control-Allow-Origin:*');
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Edit extends CI_Controller{
@@ -23,10 +25,12 @@ class Edit extends CI_Controller{
     {
 //        echo 1;
         //$this->load->view('lifetraveler/index');
-        $data['news'] = $this->editdb->get_article(1,1);
-        $string=implode(',',$data['news']);
-        echo $string;
-        //$this->load->view('news/index', $data);
+        $data = $this->editdb->get_article(1,1);
+        $this->output->set_content_type('application/json');
+        $this->output->set_header("Access-Control-Allow-Headers: Content-type");
+        $this->output->set_header("Access-Control-Allow-Origin", "*");
+        $this->output->set_header("Access-Control-Allow-Methods: GET, POST, PUT, OPTIONS");
+        $this->output->set_output(json_encode($data));//->_display();
     }
 
     public function read($articleid,$userid){

@@ -13,8 +13,12 @@ Class EditModel extends CI_Model{
     }
 
     public function get_article($articleid ="1",$userid="1"){
+        //选择数据库
+        $this->db->db_select('u632335946_main');
+        //采用ci的查询构造器方法
         $query = $this->db->get_where('main', array('user_id' => $userid,'id'=>$articleid));
-        return $query->row_array();
+        //
+        return $query->result();
     }
     public function set_news()
     {
