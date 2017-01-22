@@ -2,19 +2,33 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <title>life is a long,long traveler</title>
+    <style type="text/css">
+        *{margin:0}
+        html{height:100%; overflow:hidden;}
+        body{height:100%; overflow:hidden;}
+        div.jumbotron{height:100%; overflow:auto;}
+    </style>
+    <link rel="stylesheet" href="http://libs.useso.com/js/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <script language="JavaScript" src="http://libs.useso.com/js/jquery/2.0.0/jquery.min.js"></script>
     <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <!--script src="../../resource/js_framework/ionic/js/angular/angular.min.js"></script-->
 </head>
 <body>
-
-<div ng-app="myApp" ng-controller="customersCtrl">
-
-    <ul>
-        <li ng-repeat="x in names">
-            {{ x.id + ', ' + x.title }}
-        </li>
-    </ul>
-
+<div ng-app="myApp" ng-controller="customersCtrl" class="jumbotron">
+    <div id="music">
+    </div>
+    <div ng-repeat="x in jsonObject" class='row'>
+        <div class='col-md-2'></div><div class='col-md-1'><p>
+        {{x.M_Memorydate+ ': ' + x.M_Type_fk}}
+    </p></div><div class='col-md-8'><p>
+        {{x.M_Content}}
+    </p></div></div>
+    </div>
 </div>
+
+
+
 
 <script>
     var app = angular.module('myApp', []);
@@ -24,10 +38,8 @@
                 .success(function (response) {
 				console.log("success:");
 				console.log(response);
-				$scope.names=response;
-				
-				
-				}).error(function (response) {
+				$scope.jsonObject=response;
+                }).error(function (response) {
 				console.log("error:");
 				console.log(response);
 				});

@@ -23,9 +23,10 @@ class Edit extends CI_Controller{
 
     public function index()
     {
-//        echo 1;
-        //$this->load->view('lifetraveler/index');
-        $data = $this->editdb->get_article(1,1);
+//      echo 1;
+//      $this->load->view('lifetraveler/index');
+//        $data = $this->editdb->get_TargetArticle('1','');
+        $data = $this->editdb->get_TargetArticle('1');
         $this->output->set_content_type('application/json');
         $this->output->set_header("Access-Control-Allow-Headers: Content-type");
         $this->output->set_header("Access-Control-Allow-Origin", "*");
