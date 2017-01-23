@@ -17,7 +17,7 @@ class Edit extends CI_Controller{
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('edit/editmodel','editdb');
+        $this->load->model('edit/EditModel','editdb');
         $this->load->helper('url_helper');
     }
 
