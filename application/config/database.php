@@ -70,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | The $query_builder variables lets you determine whether or not to load
 | the query builder class.
 */
-$active_group = 'skytalk';
+$active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
@@ -98,7 +98,7 @@ $db['default'] = array(
 $db['skytalk'] = array(
     'dsn'	=> '',
     'hostname' => 'mysql.hostinger.com.hk',
-    'username' => 'u632335946_admin',
+    'username' => 'u632335946_admin1',
     'password' => 'admin123',
     'database' => 'u632335946_main',
     'dbdriver' => 'mysqli',
