@@ -27,8 +27,8 @@ class Edit extends CI_Controller{
 //      $this->load->view('lifetraveler/index');
 //        $data = $this->editdb->get_TargetArticle('1','');
         $data = $this->editdb->get_TargetArticle('1');
-//        $this->output->set_content_type('application/json');
-//        $this->output->set_header("Access-Control-Allow-Headers: Content-type");
+        $this->output->set_content_type('application/json');
+        $this->output->set_header("Access-Control-Allow-Headers: Content-type");
 //        $this->output->set_header("Access-Control-Allow-Origin", "*");
 //        $this->output->set_header("Access-Control-Allow-Methods: GET, POST, PUT, OPTIONS");
         $this->output->set_output(json_encode($data));//->_display();
