@@ -23,7 +23,7 @@ class Edit extends CI_Controller{
 
     public function index()
     {
-        echo 1;
+//        echo 1;
 //      $this->load->view('lifetraveler/index');
 //        $data = $this->editdb->get_TargetArticle('1','');
         $data = $this->editdb->get_TargetArticle('1');
