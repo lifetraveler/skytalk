@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="01239fd6-a4eb-4943-99f6-fdeea77336a7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webcontent/application/wonderland/welcome.html" afterPath="$PROJECT_DIR$/webcontent/application/wonderland/welcome.html" />
     </list>
     <ignored path="skytalk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -672,7 +671,13 @@
       <option name="project" value="LOCAL" />
       <updated>1486091731924</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="2017-2-3&#10;zhangnan&#10;htaccess 去掉 RewriteBase /">
+      <created>1486091804648</created>
+      <option name="number" value="00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1486091804648</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TodoView">
