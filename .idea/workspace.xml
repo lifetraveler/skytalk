@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01239fd6-a4eb-4943-99f6-fdeea77336a7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webcontent/application/wonderland/welcome.html" afterPath="$PROJECT_DIR$/webcontent/application/wonderland/welcome.html" />
     </list>
@@ -89,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/webcontent/application/wonderland/welcome.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.6086956">
-              <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+              <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -667,7 +666,13 @@
       <option name="project" value="LOCAL" />
       <updated>1486091409306</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="2017-2-3&#10;zhangnan&#10;htaccess 去掉 RewriteBase /">
+      <created>1486091731924</created>
+      <option name="number" value="00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1486091731924</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TodoView">
@@ -751,7 +756,8 @@
     <MESSAGE value="2017-2-3&#10;zhangnan&#10;跨域response 错误" />
     <MESSAGE value="2017-2-3&#10;zhangnan&#10;htaccess文件还原" />
     <MESSAGE value="2017-2-3&#10;zhangnan&#10;htaccess 修改 RewriteBase /" />
-    <option name="LAST_COMMIT_MESSAGE" value="2017-2-3&#10;zhangnan&#10;htaccess 修改 RewriteBase /" />
+    <MESSAGE value="2017-2-3&#10;zhangnan&#10;htaccess 去掉 RewriteBase /" />
+    <option name="LAST_COMMIT_MESSAGE" value="2017-2-3&#10;zhangnan&#10;htaccess 去掉 RewriteBase /" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1141,7 +1147,7 @@
     <entry file="file://$PROJECT_DIR$/webcontent/application/wonderland/welcome.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6086956">
-          <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+          <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
           <folding />
         </state>
       </provider>
