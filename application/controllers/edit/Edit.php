@@ -31,7 +31,7 @@ class Edit extends CI_Controller{
 //        $this->output->set_header("Access-Control-Allow-Headers: Content-type");
 //        $this->output->set_header("Access-Control-Allow-Origin", "*");
 //        $this->output->set_header("Access-Control-Allow-Methods: GET, POST, PUT, OPTIONS");
-//        $this->output->set_output(json_encode($data));//->_display();
+        $this->output->set_output(json_encode($data));//->_display();
     }
 
     public function read($articleid,$userid){
