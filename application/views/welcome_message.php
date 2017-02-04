@@ -64,6 +64,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		box-shadow: 0 0 8px #D0D0D0;
 	}
 	</style>
+	<script type="application/javascript">
+		//alert(123);
+		console.log(document.cookie);
+		alert(document.cookie);
+	</script>
 </head>
 <body>
 

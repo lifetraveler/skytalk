@@ -1,0 +1,25 @@
+2017/2/3
+1.解决hostiger 服务器上 500错误
+	一开始以为是htaccess文件导致的访问权限问题，除夕前一天遇到这个问题，过了一个年，又拿出来处理，给服务商发了问题工单，也是提醒我可能是权限原因导致，限制了思路。因为本地可以运行，一直没有考虑代码层面问题。今天偶尔想了一下，改变数据库配置的时候，页面会提示错误，说明可以访问到controller跟model层面，这就排除了访问权限的问题。难道真的是代码问题？采用最原始的逐行注释排错，果然，问题发现了。问题出现在了 controller 类里  指定了renponse 类型，加了
+	
+		$this->output->set_content_type('application/json');
+		$this->output->set_header("Access-Control-Allow-Headers: Content-type");
+//		$this->output->set_header("Access-Control-Allow-Origin", "*");
+		$this->output->set_header("Access-Control-Allow-Methods: GET, POST, PUT, OPTIONS");
+		$this->output->set_output(json_encode($data));//->_display();
+		
+	这些东西，问题就在  Access-Control-Allow-Origin  这个 跨域访问权限源 上面。  为什么要加这些东西呢？这里引出了当时遇到的一个问题，就是 跨域访问。刚开始的时候，服务都部署到本地，但是一开始没有自己跑 xmapp 。而是用的phpstorm自己的php服务器，在调用本地提供的一个数据api的时候，提示跨域错误，为了解决这个问题，百度后加入这些。没想到问题出在这里。
+	
+	但为什么本地是可以的，hostiger上面就有问题呢？我想着应该是服务器apache的配置问题。这个返回消息头参数 不需要 明确指出，只要 Access-Control 相关设定了，就自动返回这个权限了。这里还不是很明白，问题解决了，这块还需要弄得更明白。
+	
+2.目录结构问题。
+	因为目前前台跟后台都部署到一台服务器上面，导致目录 比较乱，目前还没有分开。如果是两台服务器就好办多了。CI的统一入口都是根目录的index.php。不知道这样理解的对不对。这里还需要进一步的了解CI。
+3.apache配置rewrite之-----No input file specified.
+	http://www.th7.cn/Program/php/201609/962831.shtml
+	（二）apacheNo input file specified
+	apache No input filespecified,今天是我们配置apache RewriteRule时出现这种问题，解决办法很简单如下
+	打开.htaccess 在RewriteRule 后面的index.php教程后面添加一个“?”
+
+
+2017/2/4
+1.目录问题暂时搁置，
