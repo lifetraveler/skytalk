@@ -67,7 +67,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script type="application/javascript">
 		//alert(123);
 		console.log(document.cookie);
-		alert(document.cookie);
+		document.write(document.cookie);
 	</script>
 </head>
 <body>

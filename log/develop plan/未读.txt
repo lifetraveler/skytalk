@@ -11,3 +11,9 @@
     http://www.iteye.com/problems/90604
 6.Cookie/Session机制详解
     http://blog.csdn.net/fangaoxin/article/details/6952954
+
+
+2017/2/6
+1.深入理解 Session 与 Cookie
+    http://blog.csdn.net/xinguan1267/article/details/50209053
+

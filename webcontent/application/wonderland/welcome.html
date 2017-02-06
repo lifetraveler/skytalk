@@ -32,9 +32,14 @@
 
 <script>
     var app = angular.module('myApp', []);
+    var dataurl={
+        default:"http://localhost:8089/skytalk/edit",
+        skytalk:"http://lifetraveler.top/edit"
+
+    }
 	//document.domain='baidu.com';
     app.controller('customersCtrl', function($scope, $http) {
-        $http.get("http://lifetraveler.top/edit",{ headers : {'Origin' : 'baidu.com'},withCredentials: true })
+        $http.get(dataurl.default,{ headers : {'Origin' : 'baidu.com'},withCredentials: true })
                 .success(function (response) {
 				console.log("success:");
 				console.log(response);
