@@ -51,6 +51,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 //
 
-$route['edit/(:any)'] = 'edit/edit/$1';
+$route['login'] = 'user/login/login';
+$route['login/(:any)/(:any)'] = 'user/login/login/$1/$2';
 $route['edit'] = 'edit/edit';
+$route['edit/(:any)'] = 'edit/edit/$1';
 $route['default_controller'] = 'welcome';

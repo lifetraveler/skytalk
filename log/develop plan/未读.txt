@@ -17,3 +17,8 @@
 1.深入理解 Session 与 Cookie
     http://blog.csdn.net/xinguan1267/article/details/50209053
 
+2017/2/7
+1.每天进步一点点——五分钟理解一致性哈希算法(consistent hashing)
+    http://blog.csdn.net/cywosp/article/details/23397179/
+2.php token的生成
+    http://www.cnblogs.com/bjfy/p/5909690.html

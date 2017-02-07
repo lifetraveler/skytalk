@@ -24,3 +24,24 @@
 
 2.Memcache协议中文版
     url:http://www.ccvita.com/306.html
+
+
+2017/2/7
+1.如何保证用户登录时提交密码已经加密？
+    https://www.zhihu.com/question/20060155
+2.How To Safely Store A Password
+    https://codahale.com/how-to-safely-store-a-password/
+3.app接口设计之token的php实现
+    http://blog.csdn.net/qq_26291823/article/details/53337518
+4.OAuth 授权的工作原理是怎样的？足够安全吗？
+    https://www.zhihu.com/question/19781476
+5.帮你深入理解OAuth2.0协议
+    http://blog.csdn.net/seccloud/article/details/8192707
+    https://www.zhihu.com/people/pnig0s/answers
+6.张天琪——OAuth Security.pdf
+    http://pan.baidu.com/share/link?shareid=160592&uk=1093341668
+7.app与后台的token、sessionId、RSA加密登录认证与安全解决方案
+    http://blog.csdn.net/jack85986370/article/details/51362278
+
+8.10 Things You Should Know about Tokens
+    https://auth0.com/blog/ten-things-you-should-know-about-tokens-and-cookies/
