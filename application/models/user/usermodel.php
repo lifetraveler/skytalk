@@ -20,4 +20,44 @@ Class usermodel extends CI_Model
         return $query->result();
     }
 
+    public function register(E_LT_SYS_USER $obj)
+    {
+
+        $this->db->db_select('u632335946_main');
+        //echo $obj->getUSERNAME();
+        //echo $obj->USER_NAME;
+        if($obj->getUSERNAME() !='' && $obj->getUSERPWD() !='')
+        {
+           if($this->db->insert('lt_sys_user',$obj))
+           {
+               $result=array(
+                    "errorcode"=>'0000',
+                    "message"=>'插入成功'
+               );
+           }else
+           {
+               $result=array(
+                   "errorcode"=>'0001',
+                   "message"=>'插入失败'
+               );
+           }
+
+        }else
+        {
+            $result=array(
+                "errorcode"=>'0001',
+                "message"=>'姓名或者密码为空'
+            );
+
+        }
+        return $result;
+
+    }
+
+public function search($name)
+{
+    $count=$this->db->where('USER_NAME',$name)->count_all_results('lt_sys_user');
+    //echo $count;
+    return $count;
+}
 }

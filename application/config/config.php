@@ -324,6 +324,13 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
+// Get a hex-encoded representation of the key:
+//$key = bin2hex($this->encryption->create_key(16));
+
+// Put the same value in your config with hex2bin(),
+// so that it is still passed as binary to the library:
+//$config['encryption_key'] = hex2bin($key);
+
 $config['encryption_key'] = '';
 
 /*

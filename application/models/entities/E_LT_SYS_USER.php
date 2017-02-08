@@ -1,16 +1,15 @@
 <?php
-namespace application\controllers\user;
 /**
  * Created by PhpStorm.
  * User: zhn
  * Date: 2017/2/6
  * Time: 14:57
  */
-class User
+class E_LT_SYS_USER
 {
-    protected $USER_ID;
-    protected $USER_NAME;
-    protected $USER_PWD;
+    public $USER_ID;
+    public $USER_NAME;
+    public $USER_PWD;
 
     /**
      * User constructor.
@@ -18,11 +17,6 @@ class User
      * @param $USER_NAME
      * @param $USER_PWD
      */
-    public function __construct( $USER_NAME, $USER_PWD)
-    {
-        $this->USER_NAME = $USER_NAME;
-        $this->USER_PWD = $USER_PWD;
-    }
 
     /**
      * @return mixed

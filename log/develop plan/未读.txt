@@ -22,3 +22,8 @@
     http://blog.csdn.net/cywosp/article/details/23397179/
 2.php token的生成
     http://www.cnblogs.com/bjfy/p/5909690.html
+2017/2/8
+1.AngularJS沙箱绕过：反射型XSS导致麦当劳用户密码泄露
+    http://www.tuicool.com/articles/YVbYFrM
+2.如何高效破解Ashley Madison网站中上百万的bcrypt哈希？
+    http://www.tuicool.com/articles/vUBfmam

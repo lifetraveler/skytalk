@@ -45,3 +45,8 @@
 
 8.10 Things You Should Know about Tokens
     https://auth0.com/blog/ten-things-you-should-know-about-tokens-and-cookies/
+
+
+2017/2/8
+1.使用BCrypt算法免除存储salt
+    http://www.07net01.com/2015/08/904603.html
