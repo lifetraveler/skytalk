@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01239fd6-a4eb-4943-99f6-fdeea77336a7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webcontent/application/user/Form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webcontent/application/user/List.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webcontent/application/user/User.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webcontent/application/user/myUsers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/autoload.php" afterPath="$PROJECT_DIR$/application/config/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/database.php" afterPath="$PROJECT_DIR$/application/config/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Welcome.php" afterPath="$PROJECT_DIR$/application/controllers/Welcome.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/user/Login.php" afterPath="$PROJECT_DIR$/application/controllers/user/Login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/user/usermodel.php" afterPath="$PROJECT_DIR$/application/models/user/usermodel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/develop plan/问题集锦.txt" afterPath="$PROJECT_DIR$/log/develop plan/问题集锦.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webcontent/application/user/myUsers.js" afterPath="$PROJECT_DIR$/webcontent/application/user/myUsers.js" />
     </list>
     <ignored path="skytalk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -98,8 +89,8 @@
       <file leaf-file-name="myUsers.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webcontent/application/user/myUsers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.152174">
-              <caret line="54" column="37" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.8051576">
+              <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -195,8 +186,8 @@
         <option value="$PROJECT_DIR$/log/develop plan/问题集锦.txt" />
         <option value="$PROJECT_DIR$/webcontent/application/user/User.html" />
         <option value="$PROJECT_DIR$/webcontent/application/user/Form.html" />
-        <option value="$PROJECT_DIR$/webcontent/application/user/myUsers.js" />
         <option value="$PROJECT_DIR$/application/controllers/user/Login.php" />
+        <option value="$PROJECT_DIR$/webcontent/application/user/myUsers.js" />
       </list>
     </option>
   </component>
@@ -460,12 +451,6 @@
       <created>1480643874079</created>
       <option name="number" value="Default" />
       <updated>1480643874079</updated>
-    </task>
-    <task id="LOCAL-00003" summary="2016-12-02&#10;zhangnan&#10;网易云音乐在公司内网无法使用屏蔽">
-      <created>1480648137798</created>
-      <option name="number" value="00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1480648137798</updated>
     </task>
     <task id="LOCAL-00004" summary="2016-12-02&#10;zhangnan&#10;网易云音乐在公司内网无法使用屏蔽">
       <created>1480661439929</created>
@@ -755,7 +740,13 @@
       <option name="project" value="LOCAL" />
       <updated>1486547821977</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="2017-2-8&#10;zhangnan&#10;注册实现，前台测试界面&#10;">
+      <created>1486634730480</created>
+      <option name="number" value="00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1486634730497</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TodoView">
@@ -773,15 +764,15 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2579666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32838285" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32838285" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18481848" sideWeight="0.15705615" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2185129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6452145" sideWeight="0.84294385" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3729373" sideWeight="0.84294385" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961714" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32673267" sideWeight="0.4939117" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32838285" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -823,7 +814,8 @@
     <MESSAGE value="2017-2-6&#10;zhangnan&#10;增加用户类，登录验证类&#10;" />
     <MESSAGE value="2017-2-7&#10;zhangnan&#10;增加用户类，登录验证类&#10;" />
     <MESSAGE value="2017-2-8&#10;zhangnan&#10;实体类文件夹，登陆类设计&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="2017-2-8&#10;zhangnan&#10;实体类文件夹，登陆类设计&#10;" />
+    <MESSAGE value="2017-2-8&#10;zhangnan&#10;注册实现，前台测试界面&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="2017-2-8&#10;zhangnan&#10;注册实现，前台测试界面&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1224,8 +1216,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webcontent/application/user/myUsers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.152174">
-          <caret line="54" column="37" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.8051576">
+          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
           <folding />
         </state>
       </provider>

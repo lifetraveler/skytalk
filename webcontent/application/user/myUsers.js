@@ -49,6 +49,12 @@ angular.module('myApp', []).controller
                 'name':$scope.form.name,
                 'pwd':$scope.form.pwd,
                 'email':$scope.form.email
+            },
+            postCfg:{
+                headers:{ 'Content-Type': 'application/x-www-form-urlencoded' },
+                transformRequest: function (data) {
+                    return $.param(data);
+                }
             }
         }).
         success(function(data, status) {
