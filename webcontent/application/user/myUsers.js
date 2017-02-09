@@ -45,17 +45,9 @@ angular.module('myApp', []).controller
         $http({
             method: "POST",
             url: "http://localhost:8089/skytalk/user/login/register",
-            data:{
-                'name':$scope.form.name,
-                'pwd':$scope.form.pwd,
-                'email':$scope.form.email
-            },
-            postCfg:{
-                headers:{ 'Content-Type': 'application/x-www-form-urlencoded' },
-                transformRequest: function (data) {
-                    return $.param(data);
-                }
-            }
+            headers:{ 'Content-Type': 'application/x-www-form-urlencoded' },
+            data:$scope.form
+
         }).
         success(function(data, status) {
             //$scope.status = status;

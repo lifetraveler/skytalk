@@ -94,18 +94,16 @@ class Login extends CI_Controller
 
     public function register()
     {
-        $get=$_GET;
         $post=$_POST;
         var_dump($post);
-        var_dump($get);
 //      安全过滤
 //      $request = $this->security->xss_clean($request);
 //      $session = $this->security->xss_clean($session);
 //      $name=$request['name'];
 //      $pwd=$request['pwd'];
 //      采用ci的输入类直接获取，第二个参数true，进行xss过滤，等于上卖弄的xss_cleans
-        $name=$this->input->post_get('name',true);
-        $pwd=$this->input->post_get('pwd',true);
+        $name=$this->input->post('name',true);
+        $pwd=$this->input->post('pwd',true);
         echo "name=".$name;
         echo "pwd=".$pwd;
         //进行用户校验，是否存在
