@@ -7,22 +7,23 @@ angular.module('myApp', []).controller
     $scope.form={
         name:'',
         pwd:'',
-        count:1
+        count:1,
+        errormessage:''
     }
 
 
     $scope.$watch('form.pwd',function() {
-        $scope.form.count++;
+        //$scope.form.count++;
         $scope.test();
     },true);
     $scope.$watch('form.name',function() {
-        $scope.form.count++;
+        //$scope.form.count++;
         $scope.test();
     },true);
 
     $scope.test = function() {
-        console.log("$scope.form.pwd.length="+$scope.form.pwd.length);
-        console.log("$scope.form.name="+$scope.form.name);
+        //console.log("$scope.form.pwd.length="+$scope.form.pwd.length);
+        //console.log("$scope.form.name="+$scope.form.name);
         if ($scope.form.pwd.length<8 || $scope.form.pwd.length>56) {
             $scope.error =true;
         } else {
@@ -46,12 +47,20 @@ angular.module('myApp', []).controller
             method: "POST",
             url: "http://localhost:8089/skytalk/user/login/register",
             headers:{ 'Content-Type': 'application/x-www-form-urlencoded' },
-            data:$scope.form
+            data: $scope.form,
+            transformRequest: function(obj) {
+                var str = [];
+                for (var p in obj) {
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                }
+                return str.join("&");
+            }
 
         }).
         success(function(data, status) {
             //$scope.status = status;
-            $scope.users = data;
+            //$scope.users = data;
+                $scope.form.errormessage=data['message'];
             console.log(data);
         }).
         error(function(data, status) {
@@ -68,14 +77,14 @@ angular.module('myApp', []).controller
             console.log(id);
             $scope.edit = true;
             $scope.incomplete = false;
-            $scope.name = '';
-            $scope.email = '';
-            $scope.pwd = '';
+            $scope.form.name = '';
+            $scope.form.email = '';
+            $scope.form.pwd = '';
         } else {
             $scope.edit = false;
-            $scope.name = $scope.users[id-1].USER_NAME;
-            $scope.email = $scope.users[id-1].USER_NAME;
-            $scope.pwd = $scope.users[id-1].USER_PWD;
+            $scope.form.name = $scope.users[id-1].USER_NAME;
+            $scope.form.email = $scope.users[id-1].USER_NAME;
+            $scope.form.pwd = $scope.users[id-1].USER_PWD;
         }
 
         //$scope.apply();

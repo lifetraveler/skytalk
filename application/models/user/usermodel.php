@@ -30,6 +30,7 @@ Class usermodel extends CI_Model
     public function getalluser()
     {
         $this->db->db_select('u632335946_main');
+        $this->db->select('USER_ID, USER_NAME, USER_PWD');
         $query = $this->db->get_where('lt_sys_user');
         return $query->result();
     }
@@ -38,8 +39,6 @@ Class usermodel extends CI_Model
     {
 
         $this->db->db_select('u632335946_main');
-        //echo $obj->getUSERNAME();
-        //echo $obj->USER_NAME;
         if($obj->getUSERNAME() !='' && $obj->getUSERPWD() !='')
         {
            if($this->db->insert('lt_sys_user',$obj))

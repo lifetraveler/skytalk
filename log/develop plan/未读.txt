@@ -27,3 +27,6 @@
     http://www.tuicool.com/articles/YVbYFrM
 2.如何高效破解Ashley Madison网站中上百万的bcrypt哈希？
     http://www.tuicool.com/articles/vUBfmam
+2017/2/9
+1.JS利用正则表达式校验手机号
+    http://blog.csdn.net/sunhuaqiang1/article/details/50134509

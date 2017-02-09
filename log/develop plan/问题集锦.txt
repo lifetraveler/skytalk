@@ -75,3 +75,9 @@
 1. angularjs $watch ng-include 中的变量引发的问题
     http://blog.csdn.net/blakefez/article/details/50698582
     这个问题坑了真的好久，我猜测是作用域的问题，果然是。
+2.加盐hash保存密码的正确方式（上）
+    http://blog.csdn.net/lvxiangan/article/details/49201071
+2.加盐hash保存密码的正确方式（下）
+    http://blog.csdn.net/lvxiangan/article/details/49201085
+3.加盐密码哈希：如何正确使用  这个文章是上面上下的合体
+    http://blog.jobbole.com/61872/#toc3

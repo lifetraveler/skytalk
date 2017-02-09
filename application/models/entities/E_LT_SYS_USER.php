@@ -10,6 +10,12 @@ class E_LT_SYS_USER
     public $USER_ID;
     public $USER_NAME;
     public $USER_PWD;
+    public $USER_SALT;
+    public $USER_EMAIL;
+    public $USER_MOBILE;
+    public $USER_NICKNAME;
+    public $USER_CREATEDATE;
+
 
     /**
      * User constructor.
@@ -70,6 +76,86 @@ class E_LT_SYS_USER
     {
         $this->USER_PWD = $USER_PWD;
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUSERSALT()
+    {
+        return $this->USER_SALT;
+    }
+
+    /**
+     * @param mixed $USER_SALT
+     */
+    public function setUSERSALT($USER_SALT)
+    {
+        $this->USER_SALT = $USER_SALT;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUSERCREATEDATE()
+    {
+        return $this->USER_CREATEDATE;
+    }
+
+    /**
+     * @param mixed $USER_CREATEDATE
+     */
+    public function setUSERCREATEDATE($USER_CREATEDATE)
+    {
+        $this->USER_CREATEDATE = $USER_CREATEDATE;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUSEREMAIL()
+    {
+        return $this->USER_EMAIL;
+    }
+
+    /**
+     * @param mixed $USER_EMAIL
+     */
+    public function setUSEREMAIL($USER_EMAIL)
+    {
+        $this->USER_EMAIL = $USER_EMAIL;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUSERMOBILE()
+    {
+        return $this->USER_MOBILE;
+    }
+
+    /**
+     * @param mixed $USER_MOBILE
+     */
+    public function setUSERMOBILE($USER_MOBILE)
+    {
+        $this->USER_MOBILE = $USER_MOBILE;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUSERNICKNAME()
+    {
+        return $this->USER_NICKNAME;
+    }
+
+    /**
+     * @param mixed $USER_NICKNAME
+     */
+    public function setUSERNICKNAME($USER_NICKNAME)
+    {
+        $this->USER_NICKNAME = $USER_NICKNAME;
     }
 
 

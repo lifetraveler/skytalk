@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50090
 File Encoding         : 65001
 
-Date: 2017-01-24 00:42:38
+Date: 2017-02-09 22:40:17
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -46,13 +46,19 @@ CREATE TABLE `lt_sys_user` (
   `USER_ID` int(11) NOT NULL auto_increment,
   `USER_NAME` varchar(20) NOT NULL,
   `USER_PWD` varchar(1000) NOT NULL,
+  `USER_SALT` varchar(250) default NULL,
+  `USER_EMAIL` varchar(50) default NULL,
+  `USER_MOBILE` varchar(20) default NULL,
+  `USER_NICKNAME` varchar(50) default NULL,
+  `USER_CREATEDATE` timestamp NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
   PRIMARY KEY  (`USER_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lt_sys_user
 -- ----------------------------
-INSERT INTO `lt_sys_user` VALUES ('1', '卡莉斯塔', '123');
+INSERT INTO `lt_sys_user` VALUES ('1', '卡莉斯塔', '123', null, null, null, null, null);
+INSERT INTO `lt_sys_user` VALUES ('2', '1', 'fd0a3f168e501c7c2ee77dd38e438abf8a3a516f2a15340adea354b62fab0840', 'eRkSxvZ09IbOrGifD2GHXiofs+vQEvOGrd4TrHN2Wq4=', null, null, null, null);
 
 -- ----------------------------
 -- Table structure for `lt_sys_userres`
