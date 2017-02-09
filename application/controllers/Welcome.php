@@ -21,7 +21,7 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		//session 验证
-		$this->load->library('session');
+		//$this->load->library('session');
 
 		var_dump($_SESSION);
 

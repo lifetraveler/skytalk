@@ -20,6 +20,20 @@ Class usermodel extends CI_Model
         return $query->result();
     }
 
+    public function getUser($name)
+    {
+        $this->db->db_select('u632335946_main');
+        $query = $this->db->get_where('lt_sys_user', array('USER_NAME' => $name));
+        return $query->row();
+    }
+
+    public function getalluser()
+    {
+        $this->db->db_select('u632335946_main');
+        $query = $this->db->get_where('lt_sys_user');
+        return $query->result();
+    }
+
     public function register(E_LT_SYS_USER $obj)
     {
 

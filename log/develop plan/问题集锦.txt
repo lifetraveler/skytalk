@@ -70,3 +70,8 @@
    direct access) linked to that identifier. There are many drawbacks of session id and
    it's not enough to fulfill the developer requirements.[vague] Many developers use
    other logic to identify the session.
+
+2016/2/9
+1. angularjs $watch ng-include 中的变量引发的问题
+    http://blog.csdn.net/blakefez/article/details/50698582
+    这个问题坑了真的好久，我猜测是作用域的问题，果然是。

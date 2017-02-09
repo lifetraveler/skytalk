@@ -26,23 +26,51 @@ class Login extends CI_Controller
         //$this->load->library('encryption');
     }
 
-    public function login($name,$pwd,$email)
+    public function login()
     {
         //$key = $this->encryption->create_key(16);
-
-        $data=$this->user->login($name,$email);
-        $hashedPWD=$data['PWD'];
+//        echo 1;
+        $name=$this->input->post_get('name');
+        $pwd=$this->input->post_get('pwd');
+        $email=$this->input->post_get('email');
+        $data=$this->user->getUser($name);
+        //var_dump($data);
+        $hashedPWD=$data->USER_PWD;
         if( password_verify($pwd,$hashedPWD))
         {
-            $this->output->set_content_type('application/json');
-            $this->output->set_header("Access-Control-Allow-Headers: Content-type");
-            $this->output->set_header("Access-Control-Allow-Origin", "*");
-            $this->output->set_header("Access-Control-Allow-Methods: GET, POST, PUT, OPTIONS");
-            $this->output->set_output(json_encode($data));//->_display();
+            //密码校验通过后，分配session
+            $logindata=array(
+                'name'=>$name,
+                'email'=>$email,
+                'logged_in'=>true
+            );
+            $this->session->set_userdata($logindata);
+//            var_dump($_SESSION);
+            $this->load->helper('cookie');
+
+            $data=array(
+                "errorcode"=>'0000',
+                "message"=>'登陆成功'
+            );
         }else
         {
+            $logindata=array(
+            'name'=>$name,
+            'email'=>$email,
+            'logged_in'=>false
+        );
+            $this->session->set_userdata($logindata);
+//            var_dump($_SESSION);
+            $data=array(
+                "errorcode"=>'0001',
+                "message"=>'密码错误,登陆失败'
+            );
         }
-
+        $this->output->set_content_type('application/json');
+        $this->output->set_header("Access-Control-Allow-Headers: Content-type");
+        $this->output->set_header("Access-Control-Allow-Origin", "*");
+        $this->output->set_header("Access-Control-Allow-Methods: GET, POST, PUT, OPTIONS");
+        $this->output->set_output(json_encode($data));//->_display();
 
     }
 
@@ -52,21 +80,36 @@ class Login extends CI_Controller
 
     }
 
+    //注销
+    public function getalluser()
+    {
+        $data=$this->user->getalluser();
+        $this->output->set_content_type('application/json');
+        $this->output->set_header("Access-Control-Allow-Headers: Content-type");
+        $this->output->set_header("Access-Control-Allow-Origin", "*");
+        $this->output->set_header("Access-Control-Allow-Methods: GET, POST, PUT, OPTIONS");
+        $this->output->set_output(json_encode($data));//->_display();
+
+    }
+
     public function register()
     {
-        //new User
-
-        $request=$_GET;
-
-        //$session=$_SESSION;
-        //安全过滤
-        $request = $this->security->xss_clean($request);
-        //$session = $this->security->xss_clean($session);
-        $name=$request['name'];
-        $pwd=$request['pwd'];
-        //echo $this->input->post['pwd'];
+        $get=$_GET;
+        $post=$_POST;
+        var_dump($post);
+        var_dump($get);
+//      安全过滤
+//      $request = $this->security->xss_clean($request);
+//      $session = $this->security->xss_clean($session);
+//      $name=$request['name'];
+//      $pwd=$request['pwd'];
+//      采用ci的输入类直接获取，第二个参数true，进行xss过滤，等于上卖弄的xss_cleans
+        $name=$this->input->post_get('name',true);
+        $pwd=$this->input->post_get('pwd',true);
+        echo "name=".$name;
+        echo "pwd=".$pwd;
         //进行用户校验，是否存在
-
+       // var_dump($_SESSION);
         $count=$this->user->search($name);
         //echo "count=".$count;
         if ($count>0)
@@ -86,9 +129,7 @@ class Login extends CI_Controller
         $user->setUSERPWD($hashedPWD);
         $data=$this->user->register($user);
         //echo $hashedPWD."\n";
-
         }
-
         $this->output->set_content_type('application/json');
         $this->output->set_header("Access-Control-Allow-Headers: Content-type");
         $this->output->set_header("Access-Control-Allow-Origin", "*");
