@@ -35,6 +35,14 @@ Class usermodel extends CI_Model
         return $query->result();
     }
 
+    public function getuserbyid($id)
+    {
+        $this->db->db_select('u632335946_main');
+        $this->db->select('USER_ID, USER_NAME, USER_PWD');
+        $query = $this->db->get_where('lt_sys_user',array('USER_ID'=>$id));
+        return $query->result();
+    }
+
     public function register(E_LT_SYS_USER $obj)
     {
 
@@ -45,7 +53,8 @@ Class usermodel extends CI_Model
            {
                $result=array(
                     "errorcode"=>'0000',
-                    "message"=>'插入成功'
+                    "message"=>'插入成功',
+                   "userid"=>$this->db->insert_id()
                );
            }else
            {

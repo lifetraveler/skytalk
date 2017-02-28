@@ -5,7 +5,7 @@
  * Date: 2017/2/13
  * Time: 17:11
  */
-class Util
+class WechatUtil
 {
     public static $TOKEN='dfmlgjchehe123';
 

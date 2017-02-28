@@ -7,7 +7,7 @@
         <th>name</th>
         <th>pwd</th>
     </tr></thead>
-    <tbody><tr ng-repeat="user in users">
+    <tbody><tr ng-repeat="user in users track by user.USER_ID">
         <td>
             <button class="btn" ng-click="editUser(user.USER_ID)">
                 <span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit

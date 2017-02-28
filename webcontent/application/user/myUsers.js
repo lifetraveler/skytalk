@@ -60,7 +60,16 @@ angular.module('myApp', []).controller
         success(function(data, status) {
             //$scope.status = status;
             //$scope.users = data;
-                $scope.form.errormessage=data['message'];
+            $scope.form.errormessage=data['message'];
+            if(data['errorcode']=="0000")
+            {
+                $scope.getUserById(data['userid']);
+            }else{
+
+            }
+
+            //$scope.users.push({USER_NAME:$scope.form.name,USER_PWD:$scope.form.pwd});
+
             console.log(data);
         }).
         error(function(data, status) {
@@ -86,6 +95,28 @@ angular.module('myApp', []).controller
             $scope.form.email = $scope.users[id-1].USER_NAME;
             $scope.form.pwd = $scope.users[id-1].USER_PWD;
         }
+
+        //$scope.apply();
+    };
+
+
+
+    $scope.getUserById = function(id) {
+
+        $http({
+            method: "POST",
+            url: "http://localhost:8089/skytalk/user/login/getuserbyid?userid="+id
+
+        }).
+        success(function(data, status) {
+            //$scope.status = status;
+            $scope.users.push(data[0]) ;
+        }).
+        error(function(data, status) {
+            //$scope.data = data || "Request failed";
+            //$scope.status = status;
+        });
+
 
         //$scope.apply();
     };

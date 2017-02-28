@@ -94,6 +94,20 @@ class Login extends CI_Controller
 
     }
 
+    //注销
+    public function getuserbyid()
+    {
+
+        $id = $this->input->post_get('userid');
+        $data=$this->user->getuserbyid($id);
+        $this->output->set_content_type('application/json');
+        $this->output->set_header("Access-Control-Allow-Headers: Content-type");
+        $this->output->set_header("Access-Control-Allow-Origin", "*");
+        $this->output->set_header("Access-Control-Allow-Methods: GET, POST, PUT, OPTIONS");
+        $this->output->set_output(json_encode($data));//->_display();
+
+    }
+
     public function register()
     {
 
