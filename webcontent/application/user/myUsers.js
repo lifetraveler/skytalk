@@ -131,7 +131,14 @@ angular.module('myApp', []).controller
     }).
     success(function(data, status) {
         //$scope.status = status;
-        $scope.users = data;
+        //$scope.users = data;
+        $scope.data = data;
+        $scope.pageSize = 5;
+        $scope.pages = Math.ceil($scope.data.length / $scope.pageSize); //分页数
+        $scope.newPages = $scope.pages > 5 ? 5 : $scope.pages;
+        $scope.pageList = [];
+        $scope.selPage = 1;
+
     }).
     error(function(data, status) {
         //$scope.data = data || "Request failed";
