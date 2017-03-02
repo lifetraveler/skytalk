@@ -30,3 +30,11 @@
 2017/2/9
 1.JS利用正则表达式校验手机号
     http://blog.csdn.net/sunhuaqiang1/article/details/50134509
+2017/3/2
+1.各位前辈，请问我离游戏开发的梦想还有多远（求职贴）？
+    https://www.zhihu.com/question/56452830
+2.https://www.zhihu.com/people/a-a-a-37-1/answers
+3.https://www.zhihu.com/question/20403852
+4.http://nehe.gamedev.net/
+5.jQuery粒子系统插件Particleground
+    http://www.jq22.com/yanshi566

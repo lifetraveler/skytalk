@@ -81,3 +81,5 @@
     http://blog.csdn.net/lvxiangan/article/details/49201085
 3.加盐密码哈希：如何正确使用  这个文章是上面上下的合体
     http://blog.jobbole.com/61872/#toc3
+
+
