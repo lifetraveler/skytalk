@@ -82,4 +82,9 @@ public function search($name)
     //echo $count;
     return $count;
 }
+
+    public function delUser()
+    {
+
+    }
 }
