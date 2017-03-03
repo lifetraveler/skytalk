@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>SKYTALK开始奇幻旅行</title>
+    <link rel="stylesheet" href = "http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src= "http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
 
     <style>
         html,body{
@@ -87,14 +89,14 @@
 <canvas id="canvas"></canvas>
 
 <div class="st_divMain" ng-app="st_myApp" ng-controller="st_userCtrl">
-    !--div 登陆框--!
+    !--diva 登陆框--!
     <div class="st_login">
         <!--h2>Welcome<span><i>·</i><i>·</i><i class="i">·</i></span></h2-->
         <div class="st_form" id="st_form">
-            <input type="text" class="st_input" placeholder="用户">
+            <input type="text" class="st_input" ng-model="form.user" placeholder="用户" ng-blur="usercheck()">
             <br>
-            <input type="password" class="st_input" placeholder="密码">
-            <div class="submit">开始</div>
+            <input type="password" class="st_input" ng-model="form.password" placeholder="密码">
+            <div class="submit" ng-model="form.submit" ng-click="loginOrRegister()">开始</div>
         </div>
 
     </div>
