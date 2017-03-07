@@ -5,7 +5,7 @@
 angular.module('st_myApp', []).controller
 ('st_userCtrl',['$scope','$http', function($scope,$http)
 {
-    //判断用户名是否存在，不存在的话弹出验证码验证，邮箱录入
+    //判断用户名是否存在，不存在的话弹出验证码验证，邮箱录入ba
     $scope.usercheck=function(){
         console.log($scope.form.user);
     };
