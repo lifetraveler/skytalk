@@ -3,10 +3,14 @@
 <head>
     <meta charset="utf-8">
     <title>SKYTALK开始奇幻旅行</title>
+    <script src= "http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <!--script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script-->
+    <!--script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script-->
+    <script src= "../../resource/js_framework/sweetalert.min.js"></script>
     <link rel="stylesheet" href = "http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <script src= "http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
-    <script src= "3d.js"></script>
+    <link rel="stylesheet" href = "../../resource/js_framework/sweetalert.css">
     <script src= "login.js"></script>
+    <script src= "3d.js"></script>
 
     <style>
         html,body{
@@ -26,6 +30,10 @@
             width: 768px;
             margin: 0 auto;
             margin-top: 27%;
+        }
+        .login-alert-info{
+            position: absolute;
+            top: 38px;
         }
         .st_login{
             width:100%;
@@ -94,17 +102,25 @@
     <div ng-app="st_myApp" ng-controller="st_userCtrl">
 
         <div class="st_login">
-            <div class="st_form" id="st_form">
-                <input type="text" class="st_input" ng-model="form.user" placeholder="用户" ng-blur="usercheck()">
+            <div class="login-alert-info" ng-show="errorstatus" role="alert">
+                <span style="color:red" ng-show="errorstatus">
+                <span ng-show="errorstatus">{{form.error}}</span>
+                </span>
+            </div>
+            <form class="st_form" id="st_form" name="myForm">
+
+                <input type="text" class="st_input" ng-model="form.user"
+                       placeholder="用户" ng-blur="usercheck()">
+
                 <br>
                 <input type="password" class="st_input" ng-model="form.password" placeholder="密码">
                 <div class="submit" ng-model="form.submit" ng-click="loginOrRegister()">开始</div>
-            </div>
+            </form>
         </div>
     </div>
 </div>
 <script>
-    com.lifetraveler.ui.frame();
+    //com.lifetraveler.ui.frame();
 </script>
 </body>
 </html>

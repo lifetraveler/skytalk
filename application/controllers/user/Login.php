@@ -107,7 +107,31 @@ class Login extends CI_Controller
         $this->output->set_output(json_encode($data));//->_display();
 
     }
+//注销
+    public function getuserbyuser()
+    {
 
+        $user = $this->input->post_get('user');
+        $count=$this->user->search($user);
+        if ($count>0)
+        {
+            $data=array(
+                "errorcode"=>'0000',
+                "message"=>'已经存在此用户名'
+            );
+        }else{
+            $data=array(
+                "errorcode"=>'0001',
+                "message"=>'不存在此用户名'
+            );
+        }
+        $this->output->set_content_type('application/json');
+        $this->output->set_header("Access-Control-Allow-Headers: Content-type");
+        $this->output->set_header("Access-Control-Allow-Origin", "*");
+        $this->output->set_header("Access-Control-Allow-Methods: GET, POST, PUT, OPTIONS");
+        $this->output->set_output(json_encode($data));//->_display();
+
+    }
     public function register()
     {
 
